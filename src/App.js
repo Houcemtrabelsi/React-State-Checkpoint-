@@ -1,6 +1,7 @@
 import React from "react";
 import Profile from "./Profile";
 import "./App.css";
+import Time from './Time';
 
 class App extends React.Component {
   constructor() {
@@ -24,6 +25,7 @@ class App extends React.Component {
         <header className="App-header">
           <div><button onClick={()=>this.setState({
              Show : !this.state.Show,
+            
       
           })} >Show profile</button>
           </div>
@@ -35,6 +37,7 @@ class App extends React.Component {
             imgSrc={this.state.Show ? this.state.Person.imgSrc:""}
             profession={this.state.Show ? this.state.Person.profession:""}
           />
+          <Time/>
           
         </header>
       </div>
